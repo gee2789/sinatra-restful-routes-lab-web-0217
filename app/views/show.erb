@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Check Out Your Recipie!</h1>
+<p><%= @recipies_id.name %></p>
+<p><%= @recipies_id.ingredients %></p>
+<p><%= @recipies_id.cook_time %></p>
+
+<form method="post" action="/recipes/<%=@recipies_id.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Your Recipies</title>
+</head>
+<body>
+  <h1>So Now You're Changing Your Recipie?</h1>
+  <form method="post" action="/recipes/<%=@recipies_id.id%>">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <p>Name:<input type="text" value="<%=@recipies_id.name%>" name="name" id="name"></p>
+    <p>Content:<input type="text" value="<%=@recipies_id.ingredients%>" name="ingredients" id="ingredients"></p>
+    <p>Content:<input type="text" value="<%=@recipies_id.cook_time%>" name="cook_time" id="cook_time"></p>
+    <input type="submit" id="submit">
+  </form>
+</body>
+</html>
